@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/passionone_bold.ttf",
+      "sha1": "8529424dcfb3c01d284434f45dc6331e0ef283f1"
+    },
+    {
+      "path": "src/assets/fonts/robotoItalicvariablefont_wdth.ttf",
+      "sha1": "eb51d6042f676b736a552744a77dc352d92a08e1"
+    },
+    {
+      "path": "src/assets/fonts/robotovariablefont_wdth.ttf",
+      "sha1": "6bd9646ab22c0301ce3adbfe8707213a67900404"
+    },
+    {
+      "path": "src/assets/fonts/roboto_condensed_black.ttf",
+      "sha1": "317f765e1f770c422243ccdd7d0b8cf408c58db4"
+    }
+  ]
+}
