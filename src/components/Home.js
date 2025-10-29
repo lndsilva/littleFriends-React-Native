@@ -1,7 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default props => {
+
+    const navigation = useNavigation()
+
     return (
         <View style={styles.conteudo}>
             <Text style={styles.titulo_one}>Find Your Best</Text>
@@ -9,7 +13,9 @@ export default props => {
             <Text style={styles.titulo_two}>With Us</Text>
             <View style={styles.container}>
                 <Image source={require('../assets/img_home.png')} style={styles.img_home} />
-                <TouchableOpacity style={styles.rodape_botao}>
+                <TouchableOpacity
+                    style={styles.rodape_botao}
+                    onPress={() => navigation.navigate('Categorias')}>
                     <Text style={styles.rodape_texto}>Get Started</Text>
                 </TouchableOpacity>
             </View>
@@ -31,26 +37,25 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     titulo_one: {
-        fontFamily:'roboto_condensed_black',                
+        fontFamily: "PassionOne-Bold",
         marginTop: 10,
         marginLeft: 20,
-        fontSize: 40,
+        fontSize: 50,
         color: "#000",
-        fontWeight: "bold",
         textAlign: "left",
     },
     titulo_two: {
+        fontFamily: "PassionOne-Bold",
         marginLeft: 20,
-        fontSize: 40,
+        fontSize: 50,
         color: "#000",
-        fontWeight: "bold",
         textAlign: "left",
     },
     subtitulo: {
+        fontFamily: "PassionOne-Bold",
         marginLeft: 20,
-        fontSize: 40,
+        fontSize: 50,
         color: "#F79829",
-        fontWeight: "bold",
         textAlign: "left",
     },
     img_home: {

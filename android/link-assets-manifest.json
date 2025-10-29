@@ -2,20 +2,36 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "src/assets/fonts/passionone_bold.ttf",
+      "path": "src/assets/fonts/Belanosima-Bold.ttf",
+      "sha1": "292f5068f6036b602e726f2e958177110cb29f78"
+    },
+    {
+      "path": "src/assets/fonts/Belanosima-Regular.ttf",
+      "sha1": "643d7171b9cfec591b680520aab32f9f3efddf85"
+    },
+    {
+      "path": "src/assets/fonts/Belanosima-SemiBold.ttf",
+      "sha1": "bf968db31216744d7a3fc70f1ba922626e1f826f"
+    },
+    {
+      "path": "src/assets/fonts/FrancoisOne-Regular.ttf",
+      "sha1": "9a678af0355a6e80a76dd250d051ba3eb5792297"
+    },
+    {
+      "path": "src/assets/fonts/PassionOne-Black.ttf",
+      "sha1": "8b2675552ba5e4af55205116e80909e929a0f12d"
+    },
+    {
+      "path": "src/assets/fonts/PassionOne-Bold.ttf",
       "sha1": "8529424dcfb3c01d284434f45dc6331e0ef283f1"
     },
     {
-      "path": "src/assets/fonts/robotoItalicvariablefont_wdth.ttf",
-      "sha1": "eb51d6042f676b736a552744a77dc352d92a08e1"
+      "path": "src/assets/fonts/PassionOne-Regular.ttf",
+      "sha1": "5acf813f59c57f10555e64824fccbf588001b478"
     },
     {
-      "path": "src/assets/fonts/robotovariablefont_wdth.ttf",
-      "sha1": "6bd9646ab22c0301ce3adbfe8707213a67900404"
-    },
-    {
-      "path": "src/assets/fonts/roboto_condensed_black.ttf",
-      "sha1": "317f765e1f770c422243ccdd7d0b8cf408c58db4"
+      "path": "src/assets/fonts/Roboto_SemiCondensed-Bold.ttf",
+      "sha1": "e597ad80c774ee647c4491d257c8747fdd445de9"
     }
   ]
 }

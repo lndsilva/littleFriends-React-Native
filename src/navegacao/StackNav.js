@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Splash from "../components/Splash";
 import Login from "../components/Login";
 import Home from "../components/Home";
+import Categorias from "../components/Categorias";
 
 const Stack = createStackNavigator()
 
@@ -13,6 +14,7 @@ export default props=>{
             <Stack.Screen name="Splash" component={Splash}/>
             <Stack.Screen name="Login" component={Login}/>
             <Stack.Screen name="Home" component={Home}/>
+            <Stack.Screen name="Categorias" component={Categorias}/>
         </Stack.Navigator>
     )
 }
