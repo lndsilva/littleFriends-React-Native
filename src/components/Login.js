@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, Alert } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
 
-export default props => {
+export default ({navigation}) => {
     const [usuario, setUsuario] = useState('')
     const [password, setPassword] = useState('')
     const [passwordVisible, setPasswordVisible] = useState(false)
@@ -12,11 +12,14 @@ export default props => {
         setUsuario("")
     }
 
-    const validacao = () => {
-        if (usuario.trim() === '') {
-            Alert.alert('Erro', 'Insira seu usuário')
+    const validacaoUsuario = props => {
+        if (usuario.trim() === 'senac' && password.trim() === 'senac') {
+            navigation.navigate('MenuPrincipal')
+            close()
         } else {
-            Alert.alert('Sucesso', `Olá ${usuario}`)
+            Alert.alert('Usuário ou senha inválidos!!!')
+            setUsuario('')
+            setPassword('')
         }
     }
 
@@ -33,6 +36,7 @@ export default props => {
                 </View>
                 <View style={styles.conteudo_usuario}>
                     <TextInput
+                        returnKeyLabel="next"
                         maxLength={50}
                         clearButtonMode="always"
                         label="Username"
@@ -64,7 +68,7 @@ export default props => {
                         labelStyle={styles.txtButton}
                         style={styles.button_Login}
                         mode="contained"
-                        onPress={validacao}
+                        onPress={validacaoUsuario}
                     >
                         Login
                     </Button>

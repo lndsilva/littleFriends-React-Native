@@ -5,6 +5,7 @@ import Splash from "../components/Splash";
 import Login from "../components/Login";
 import Home from "../components/Home";
 import Categorias from "../components/Categorias";
+import MenuPrincipal from "../components/MenuPrincipal";
 
 const Stack = createStackNavigator()
 
@@ -21,6 +22,7 @@ export default props => {
                 name="Login" component={Login} />
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Categorias" component={Categorias} />
+            <Stack.Screen name="MenuPrincipal" component={MenuPrincipal} />
         </Stack.Navigator>
     )
 }
