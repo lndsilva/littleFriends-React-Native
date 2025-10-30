@@ -8,13 +8,19 @@ import Categorias from "../components/Categorias";
 
 const Stack = createStackNavigator()
 
-export default props=>{
-    return(
+export default props => {
+    return (
         <Stack.Navigator initialRouteName="Login">
-            <Stack.Screen name="Splash" component={Splash}/>
-            <Stack.Screen name="Login" component={Login}/>
-            <Stack.Screen name="Home" component={Home}/>
-            <Stack.Screen name="Categorias" component={Categorias}/>
+            <Stack.Screen
+                options={{ headerShown: false }}
+                name="Splash" component={Splash} />
+            <Stack.Screen
+                options={{
+                    headerShown: false
+                }}
+                name="Login" component={Login} />
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Categorias" component={Categorias} />
         </Stack.Navigator>
     )
 }
