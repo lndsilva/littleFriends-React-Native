@@ -38,7 +38,7 @@ export default props => {
                         left={<TextInput.Icon icon="lock" />}
                         right={
                             <TextInput.Icon
-                                icon={passwordVisible ? "eye-off" : "eye"}
+                                icon={passwordVisible ? "eye" : "eye-off"}
                                 onPress={() => setPasswordVisible(!passwordVisible)}
                             />
                         }
