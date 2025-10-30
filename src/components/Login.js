@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Alert } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
 
@@ -7,6 +7,20 @@ export default props => {
     const [usuario, setUsuario] = useState('')
     const [password, setPassword] = useState('')
     const [passwordVisible, setPasswordVisible] = useState(false)
+
+    const limpar = () => {
+        setUsuario("")
+    }
+
+    const validacao = () => {
+        if (usuario.trim() === '') {
+            Alert.alert('Erro', 'Insira seu usuário')
+        } else {
+            Alert.alert('Sucesso', `Olá ${usuario}`)
+        }
+    }
+
+
     return (
         <View style={styles.container}>
             <View>
@@ -23,7 +37,9 @@ export default props => {
                         clearButtonMode="always"
                         label="Username"
                         left={<TextInput.Icon icon="account" />}
-                        right={<TextInput.Icon icon="close-circle-outline" />}
+                        right={<TextInput.Icon icon="close-circle-outline"
+                            onPress={limpar}
+                        />}
                         styles={styles.txtUsuario}
                         mode="outlined"
                         value={usuario}
@@ -47,7 +63,9 @@ export default props => {
                     <Button
                         labelStyle={styles.txtButton}
                         style={styles.button_Login}
-                        mode="contained">
+                        mode="contained"
+                        onPress={validacao}
+                    >
                         Login
                     </Button>
                     <Button
