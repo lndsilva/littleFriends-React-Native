@@ -1,9 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import { TextInput } from "react-native-paper";
+import { Button, TextInput } from "react-native-paper";
 
 
 export default props => {
+    const [usuario, setUsuario] = useState('')
+    const [password, setPassword] = useState('')
+    const [passwordVisible, setPasswordVisible] = useState(false)
     return (
         <View style={styles.container}>
             <View>
@@ -20,17 +23,39 @@ export default props => {
                         clearButtonMode="always"
                         label="Username"
                         left={<TextInput.Icon icon="account" />}
+                        right={<TextInput.Icon icon="close-circle-outline" />}
                         styles={styles.txtUsuario}
                         mode="outlined"
+                        value={usuario}
+                        onChangeText={text => setUsuario(text)}
                     />
                     <TextInput
-                        maxLength={50}
-                        clearButtonMode="always"
-                        label="Username"
+                        label="Password"
+                        value={password}
+                        onChangeText={text => setPassword(text)}
+                        secureTextEntry={!passwordVisible}
+                        maxLength={12}
                         left={<TextInput.Icon icon="lock" />}
-                        styles={styles.txtUsuario}
-                        mode="outlined"
-                    />
+                        right={
+                            <TextInput.Icon
+                                icon={passwordVisible ? "eye-off" : "eye"}
+                                onPress={() => setPasswordVisible(!passwordVisible)}
+                            />
+                        }
+                        styles={styles.txtSenha}
+                        mode="outlined" />
+                    <Button
+                        labelStyle={styles.txtButton}
+                        style={styles.button_Login}
+                        mode="contained">
+                        Login
+                    </Button>
+                    <Button
+                        labelStyle={styles.txtButton}
+                        style={styles.button_cadastrar}
+                        mode="contained">
+                        Cadastrar
+                    </Button>
                 </View>
             </View>
         </View>
@@ -63,8 +88,29 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     conteudo_usuario: {
+        marginTop: 30,
         alignSelf: "center",
         width: '90%',
-
+    },
+    txtUsuario: {
+        margin: 20,
+    },
+    txtSenha: {
+        marginTop: 20,
+    },
+    button_Login: {
+        marginTop: 20,
+        borderRadius: 10,
+        padding: 10,
+    },
+    button_cadastrar: {
+        marginTop: 20,
+        borderRadius: 10,
+        padding: 10,
+        backgroundColor: "#F79829",
+        color: "#fff",
+    },
+    txtButton: {
+        fontSize: 18,
     }
 })
