@@ -10,7 +10,7 @@ const Stack = createStackNavigator()
 
 export default props => {
     return (
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="Splash">
             <Stack.Screen
                 options={{ headerShown: false }}
                 name="Splash" component={Splash} />
