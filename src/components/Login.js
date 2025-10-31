@@ -15,7 +15,6 @@ export default ({navigation}) => {
     const validacaoUsuario = props => {
         if (usuario.trim() === 'senac' && password.trim() === 'senac') {
             navigation.navigate('MenuPrincipal')
-            close()
         } else {
             Alert.alert('Usuário ou senha inválidos!!!')
             setUsuario('')
