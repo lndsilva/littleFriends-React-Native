@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Card, Icon, IconButton, MD3Colors } from "react-native-paper";
 
 export default ({ navigation }) => {
@@ -7,12 +7,11 @@ export default ({ navigation }) => {
         <View style={styles.container}>
             <View style={styles.conteudo}>
                 <View style={styles.headerTitle}>
-                    <IconButton
-                        icon="arrow-left"
-                        size={45}
-                        theme={{ colors: "#F79829" }}
-                        onPress={() => navigation.navigate('Login')}
-                    />
+                    <TouchableOpacity
+                        style={styles.botaoVoltar}
+                        onPress={() => navigation.navigate('Login')}>
+                        <Icon source="arrow-left" size={50} color="#F79829" />
+                    </TouchableOpacity>
                     <Text style={styles.titulo}>Menu Principal</Text>
                 </View>
             </View>

@@ -6,12 +6,13 @@ import Login from "../components/Login";
 import Home from "../components/Home";
 import Categorias from "../components/Categorias";
 import MenuPrincipal from "../components/MenuPrincipal";
+import Cadastrar from "../components/Cadastrar";
 
 const Stack = createStackNavigator()
 
 export default props => {
     return (
-        <Stack.Navigator initialRouteName="MenuPrincipal">
+        <Stack.Navigator initialRouteName="Cadastrar">
             <Stack.Screen
                 options={{ headerShown: false }}
                 name="Splash" component={Splash} />
@@ -22,6 +23,7 @@ export default props => {
                 name="Login" component={Login} />
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Categorias" component={Categorias} />
+            <Stack.Screen name="Cadastrar" component={Cadastrar} />
             <Stack.Screen
                 options={{
                     headerShown: false

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, Alert } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
 
-export default ({navigation}) => {
+export default ({ navigation }) => {
     const [usuario, setUsuario] = useState('')
     const [password, setPassword] = useState('')
     const [passwordVisible, setPasswordVisible] = useState(false)
@@ -21,8 +21,6 @@ export default ({navigation}) => {
             setPassword('')
         }
     }
-
-
     return (
         <View style={styles.container}>
             <View>
@@ -74,9 +72,17 @@ export default ({navigation}) => {
                     <Button
                         labelStyle={styles.txtButton}
                         style={styles.button_cadastrar}
-                        mode="contained">
+                        mode="contained"
+                        onPress={() => navigation.navigate("Cadastrar")}
+                    >
                         Cadastrar
+
                     </Button>
+                    <Text style={styles.acessarCom}>-------------------- Acessar com --------------------</Text>
+                    <View style={styles.acesso_logo}>
+                        <Image source={require('../assets/facebook.png')} style={styles.acesso} />
+                        <Image source={require('../assets/google.png')} style={styles.acesso} />
+                    </View>
                 </View>
             </View>
         </View>
@@ -95,7 +101,8 @@ const styles = StyleSheet.create({
     logo: {
         width: 150,
         height: 150,
-        marginBottom: 10,
+        marginTop: 50,
+        marginBottom: 30,
     },
     titulo: {
         fontFamily: "PassionOne-Bold",
@@ -133,5 +140,20 @@ const styles = StyleSheet.create({
     },
     txtButton: {
         fontSize: 18,
-    }
+    },
+    acessarCom: {
+        marginTop: 20,
+        alignSelf: "center",
+        fontSize: 20,
+    },
+    acesso_logo: {
+        flexDirection: "row",
+        padding: 10,
+        justifyContent: "center",
+        marginTop: 20
+    },
+    acesso: {
+        width: 60,
+        height: 60,
+    },
 })
