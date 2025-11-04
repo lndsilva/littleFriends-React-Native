@@ -13,13 +13,14 @@ export default () => {
     return (
         <Tab.Navigator
             screenOptions={{
+                tabBarLabelStyle: { fontSize: 20 },
                 tabBarActiveTintColor: "#fff",
                 tabBarInactiveTintColor: "#fff",
                 headerShown: false,
                 tabBarStyle: {
                     backgroundColor: "#e48519ff",
                     width: "100%",
-                    height: 80,
+                    height: 90,
                     paddingTop: 10,
                     color: "#000",
                 }
@@ -28,7 +29,7 @@ export default () => {
             <Tab.Screen
                 options={{
                     tabBarIcon: ({ }) => (
-                        <Icon source="dog" size={30} color="#ffffffff" />
+                        <Icon source="dog" size={33} color="#ffffffff" />
                     ),
                 }}
                 name="Cachorro"
@@ -37,21 +38,21 @@ export default () => {
             <Tab.Screen
                 options={{
                     tabBarIcon: ({ }) => (
-                        <Icon source="cat" size={30} color="#ffffffff" />
+                        <Icon source="cat" size={33} color="#ffffffff" />
                     ),
                 }}
                 name="Gato" component={Gato} />
             <Tab.Screen
                 options={{
                     tabBarIcon: ({ }) => (
-                        <Icon source="bird" size={30} color="#ffffffff" />
+                        <Icon source="bird" size={33} color="#ffffffff" />
                     ),
                 }}
                 name="Pássaro" component={Passaro} />
             <Tab.Screen
                 options={{
                     tabBarIcon: ({ }) => (
-                        <Icon source="fish" size={30} color="#ffffffff" />
+                        <Icon source="fish" size={33} color="#ffffffff" />
                     ),
                 }}
                 name="Peixe" component={Peixe} />

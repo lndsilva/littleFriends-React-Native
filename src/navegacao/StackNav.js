@@ -18,7 +18,7 @@ const Stack = createStackNavigator()
 
 export default props => {
     return (
-        <Stack.Navigator initialRouteName="Categorias">
+        <Stack.Navigator initialRouteName="Splash">
             <Stack.Screen
                 options={{ headerShown: false }}
                 name="Splash" component={Splash} />
@@ -31,7 +31,9 @@ export default props => {
             <Stack.Screen name="Explorer" component={Explorer} />
             <Stack.Screen name="Care" component={Care} />
             <Stack.Screen name="Doacoes" component={Doacoes} />
-            <Stack.Screen name="Categorias" component={Categorias} />
+            <Stack.Screen options={{
+                headerShown: false,
+            }} name="Categorias" component={Categorias} />
             <Stack.Screen name="Details" component={Details} />
             <Stack.Screen name="Produtos" component={Produtos} />
             <Stack.Screen
