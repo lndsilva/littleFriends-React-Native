@@ -16,7 +16,9 @@ export default ({ navigation }) => {
                 </View>
             </View>
             <View style={styles.cardHorizontal}>
-                <Card style={styles.cardContainer}>
+                <Card style={styles.cardContainer}
+                    onPress={() => navigation.navigate('Categorias')}
+                >
                     <Card.Content style={styles.cardContainer}>
                         <Card.Cover
                             style={styles.cardImage}
@@ -25,7 +27,9 @@ export default ({ navigation }) => {
 
                     </Card.Content>
                 </Card>
-                <Card style={styles.cardContainer}>
+                <Card style={styles.cardContainer}
+                    onPress={() => navigation.navigate('Details')}
+                >
                     <Card.Content style={styles.cardContainer}>
                         <Card.Cover
                             style={styles.cardImage}
@@ -36,7 +40,9 @@ export default ({ navigation }) => {
                 </Card>
             </View>
             <View style={styles.cardHorizontal}>
-                <Card style={styles.cardContainer}>
+                <Card style={styles.cardContainer}
+                    onPress={() => navigation.navigate('Explorer')}
+                >
                     <Card.Content style={styles.cardContainer}>
                         <Card.Cover
                             style={styles.cardImage}
@@ -45,7 +51,9 @@ export default ({ navigation }) => {
 
                     </Card.Content>
                 </Card>
-                <Card style={styles.cardContainer}>
+                <Card style={styles.cardContainer}
+                    onPress={() => navigation.navigate('Doacoes')}
+                >
                     <Card.Content style={styles.cardContainer}>
                         <Card.Cover
                             style={styles.cardImage}
@@ -55,8 +63,11 @@ export default ({ navigation }) => {
                     </Card.Content>
                 </Card>
             </View>
-            <View style={styles.cardHorizontal}>
-                <Card style={styles.cardContainer}>
+            <View style={styles.cardHorizontal}
+            >
+                <Card style={styles.cardContainer}
+                    onPress={() => navigation.navigate('Produtos')}
+                >
                     <Card.Content style={styles.cardContainer}>
                         <Card.Cover
                             style={styles.cardImage}
@@ -65,7 +76,9 @@ export default ({ navigation }) => {
 
                     </Card.Content>
                 </Card>
-                <Card style={styles.cardContainer}>
+                <Card style={styles.cardContainer}
+                    onPress={() => navigation.navigate('Care')}
+                >
                     <Card.Content style={styles.cardContainer}>
                         <Card.Cover
                             style={styles.cardImage}
