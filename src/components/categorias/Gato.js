@@ -1,44 +1,90 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import { Card, Icon } from "react-native-paper";
 
 export default props => {
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Text style={styles.titulo}>Categoria Pets</Text>
-            <Card style={styles.card_container}>
-                <Card.Content>
-                    <Icon source='heart-outline' size={50} color="#000" />
+            <View style={styles.container_linha}>
+                <View style={[styles.card_container, styles.card_color.cat]}>
+                    <Icon style={styles.card_icon} source="heart-outline" size={30} color="#000" />
                     <Text style={styles.card_titulo}>Charlie</Text>
-                    <Text style={styles.card_distancia_num}>1,2Km</Text>
-                    <Text style={styles.card_distancia}>Away</Text>
-                    <Image style={styles.card_imagem} source={require('../../assets/gato.png')} />
-
-                </Card.Content>
-            </Card>
-        </View>
+                    <Text>1,2Km</Text>
+                    <Text>Away</Text>
+                    <Image style={styles.card_imagem} source={require('../../assets/gato.png')} resizeMode="center" resizeMethod="auto" />
+                </View>
+                <View style={[styles.card_container, styles.card_color.dog]}>
+                    <Icon style={styles.card_icon} source="heart-outline" size={30} color="#000" />
+                    <Text style={styles.card_titulo}>Brunno</Text>
+                    <Text>1,8Km</Text>
+                    <Text>Away</Text>
+                    <Image style={styles.card_imagem} source={require('../../assets/bulldog.png')} resizeMode="center" resizeMethod="auto" />
+                </View>
+            </View>
+            <View style={styles.container_linha}>
+                <View style={[styles.card_container, styles.card_color.bird]}>
+                    <Icon style={styles.card_icon} source="heart-outline" size={30} color="#000" />
+                    <Text style={styles.card_titulo}>Ozzi</Text>
+                    <Text>1.5Km</Text>
+                    <Text>Away</Text>
+                    <Image style={styles.card_imagem} source={require('../../assets/papagaio.png')} resizeMode="center" resizeMethod="auto" />
+                </View>
+                <View style={[styles.card_container, styles.card_color.rabbit]}>
+                    <Icon style={styles.card_icon} source="heart-outline" size={30} color="#000" />
+                    <Text style={styles.card_titulo}>Brook</Text>
+                    <Text>2.0Km</Text>
+                    <Text>Away</Text>
+                    <Image style={styles.card_imagem} source={require('../../assets/coelho.png')} resizeMode="center" resizeMethod="auto" />
+                </View>
+            </View>
+            <View style={styles.container_linha}>
+                <View style={[styles.card_container, styles.card_color.dog]}>
+                    <Icon style={styles.card_icon} source="heart-outline" size={30} color="#000" />
+                    <Text style={styles.card_titulo}>Charlie</Text>
+                    <Text>1.5Km</Text>
+                    <Text>Away</Text>
+                    <Image style={styles.card_imagem} source={require('../../assets/dog_charlie.png')} resizeMode="center" resizeMethod="auto" />
+                </View>
+                <View style={[styles.card_container, styles.card_color.bird]}>
+                    <Icon style={styles.card_icon} source="heart-outline" size={30} color="#000" />
+                    <Text style={styles.card_titulo}>Ollie</Text>
+                    <Text>2.0Km</Text>
+                    <Text>Away</Text>
+                    <Image style={styles.card_imagem} source={require('../../assets/passaro.png')} resizeMode="center" resizeMethod="auto" />
+                </View>
+            </View>
+        </ScrollView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: "center",
-        backgroundColor: "#B6771D"
     },
     titulo: {
-        marginTop: 30,
-        marginBottom: 30,
+        marginTop: 10,
+        alignSelf: "center",
         fontFamily: "PassionOne-Bold",
         fontSize: 50,
-        color: "#F79829",
+        color: "#000",
+    },
+    container_linha: {
+        marginTop: 25,
+        flexDirection: "row",
+        justifyContent: "space-evenly",
     },
     card_container: {
-        width: 230,
-        height: 370,
-        borderTopEndRadius: 80,
+        marginTop: 10,
+        marginLeft: 5,
+        width: 180,
+        height: 200,
+        paddingTop: 10,
+        paddingLeft: 10,
+        borderTopEndRadius: 20,
         borderBottomEndRadius: 20,
         borderBottomRightRadius: 20,
+        borderBottomLeftRadius: 20,
         borderTopLeftRadius: 20,
         backgroundColor: "#E5D3FF",
     },
@@ -46,15 +92,16 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 10,
         fontFamily: "PassionOne-Bold",
-        fontSize: 50,
+        fontSize: 30,
         color: "#000000ff",
     },
     card_imagem: {
-        width: "100%",
-        height: "70%",
-        marginLeft: "50%",
+        marginLeft: 40,
+        width: 200,
+        height: 230,
+        position: "absolute"
     },
-    card_distancia_num: {   
+    card_distancia_num: {
         marginBottom: 10,
         fontFamily: "Belanosima-Regular",
         fontSize: 20,
@@ -62,7 +109,24 @@ const styles = StyleSheet.create({
     },
     card_distancia: {
         fontFamily: "Belanosima-Regular",
-        fontSize: 20,
+        fontSize: 30,
         color: "#000000ff",
     },
+    card_icon: {
+        padding: 10,
+    },
+    card_color: {
+        cat: {
+            backgroundColor: "#E4D3FF",
+        },
+        dog: {
+            backgroundColor: "#FFDDE5",
+        },
+        bird: {
+            backgroundColor: "#D7F5C4",
+        },
+        rabbit: {
+            backgroundColor: "#D5FBFF",
+        }
+    }
 })
