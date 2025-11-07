@@ -1,29 +1,30 @@
 import React from "react";
 import { View, Text, StyleSheet, FlatList, StatusBar } from "react-native";
-import { List, Provider, Divider } from "react-native-paper";
+import { List, Avatar, Image } from "react-native-paper";
 
 const DATA = [
-    { id: '1', title: 'Primeiro Item', descrition: 'Descrição do primeiro item', icon: 'folder' },
-    { id: '2', title: 'Segundo Item', descrition: 'Descrição do segundo item', icon: 'folder' },
-    { id: '3', title: 'Terceiro Item', descrition: 'Descrição do terceiro item', icon: 'folder' },
-    { id: '4', title: 'Quarto Item', descrition: 'Descrição do quarto item', icon: 'folder' },
-    { id: '5', title: 'Quinto Item', descrition: 'Descrição do quinto item', icon: 'folder' },
-    { id: '6', title: 'Sexto Item', descrition: 'Descrição do sexto item', icon: 'folder' },
-    { id: '7', title: 'Sétimo Item', descrition: 'Descrição do sétimo item', icon: 'folder' },
-    { id: '8', title: 'Oitavo Item', descrition: 'Descrição do oitavo item', icon: 'folder' },
-    { id: '9', title: 'Nono Item', descrition: 'Descrição do nono item', icon: 'folder' },
-    { id: '10', title: 'Décimo Item', descrition: 'Descrição do décimo item', icon: 'folder' },
+    { id: '1', title: 'Banzé', descrition: 'Descrição do primeiro item', icon: 'account-circle' },
+    { id: '2', title: 'Frank', descrition: 'Descrição do segundo item', icon: 'account-circle' },
+    { id: '3', title: 'Niko', descrition: 'Descrição do terceiro item', icon: 'account-circle' },
+    { id: '4', title: 'Pimpão', descrition: 'Descrição do quarto item', icon: 'account-circle' },
+    { id: '5', title: 'Tico', descrition: 'Descrição do quinto item', icon: 'account-circle' },
+    { id: '6', title: 'Pixel', descrition: 'Descrição do sexto item', icon: 'account-circle' },
+    { id: '7', title: 'Draco', descrition: 'Descrição do sétimo item', icon: 'account-circle' },
+    { id: '8', title: 'Fera', descrition: 'Descrição do oitavo item', icon: 'account-circle' },
+    { id: '9', title: 'Hans', descrition: 'Descrição do nono item', icon: 'account-circle' },
+    { id: '10', title: 'Kobe', descrition: 'Descrição do décimo item', icon: 'account-circle' },
 ]
 
 const renderItem = ({ item }) => (
-    <View>
+    <View style={styles.container_list_item}>
         <List.Item
+            right={props => <Avatar.Image source={require('../../assets/pet_dog.jpg')} size={50} />}
             title={item.title}
             description={item.description}
             left={props => <List.Icon {...props} icon={item.icon} />}
             onPress={() => console.log(`Pressionado`, item.title)}
         />
-        <Divider />
+
     </View>
 )
 
@@ -36,6 +37,7 @@ export default props => {
                     data={DATA}
                     renderItem={renderItem}
                     keyExtractor={item => item.id}
+                    contentContainerStyle={styles.listaContainer}
                 />
             </View>
         </View>
@@ -45,16 +47,32 @@ export default props => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#FEFDF9",
+        backgroundColor: "#ffffffff",
+    },
+    container_list_item: {
+        padding: 20,
+        marginVertical: 8,
+        marginHorizontal: 16,
+        borderRadius: 10,
+        shadowColor: "#956402ff",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+
     },
     conteudo: {
-        marginTop: StatusBar.currentHeight || 0
+
     },
     titulo: {
+        alignSelf: "center",
         marginTop: 10,
-        marginLeft: 60,
         fontFamily: "PassionOne-Bold",
         fontSize: 30,
-        color: "#F79829",
-    }
+        color: "#000000ff",
+    },
+    listaContainer: {
+        paddingVertical: 10,
+    },
+
 })

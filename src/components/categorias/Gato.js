@@ -19,7 +19,7 @@ export default props => {
                     <Text style={styles.card_titulo}>Brunno</Text>
                     <Text>1,8Km</Text>
                     <Text>Away</Text>
-                    <Image style={styles.card_imagem} source={require('../../assets/bulldog.png')} resizeMode="center" resizeMethod="auto" />
+                    <Image style={styles.card_imagem} source={require('../../assets/gato_brunno.png')} resizeMode="center" resizeMethod="auto" />
                 </View>
             </View>
             <View style={styles.container_linha}>
@@ -28,14 +28,14 @@ export default props => {
                     <Text style={styles.card_titulo}>Ozzi</Text>
                     <Text>1.5Km</Text>
                     <Text>Away</Text>
-                    <Image style={styles.card_imagem} source={require('../../assets/papagaio.png')} resizeMode="center" resizeMethod="auto" />
+                    <Image style={styles.card_imagem} source={require('../../assets/gato-ozzi.png')} resizeMode="center" resizeMethod="auto" />
                 </View>
                 <View style={[styles.card_container, styles.card_color.rabbit]}>
                     <Icon style={styles.card_icon} source="heart-outline" size={30} color="#000" />
                     <Text style={styles.card_titulo}>Brook</Text>
                     <Text>2.0Km</Text>
                     <Text>Away</Text>
-                    <Image style={styles.card_imagem} source={require('../../assets/coelho.png')} resizeMode="center" resizeMethod="auto" />
+                    <Image style={styles.card_imagem} source={require('../../assets/gato-brook.png')} resizeMode="center" resizeMethod="auto" />
                 </View>
             </View>
             <View style={styles.container_linha}>
@@ -44,14 +44,14 @@ export default props => {
                     <Text style={styles.card_titulo}>Charlie</Text>
                     <Text>1.5Km</Text>
                     <Text>Away</Text>
-                    <Image style={styles.card_imagem} source={require('../../assets/dog_charlie.png')} resizeMode="center" resizeMethod="auto" />
+                    <Image style={styles.card_imagem} source={require('../../assets/gato-charllie.png')} resizeMode="center" resizeMethod="auto" />
                 </View>
                 <View style={[styles.card_container, styles.card_color.bird]}>
                     <Icon style={styles.card_icon} source="heart-outline" size={30} color="#000" />
                     <Text style={styles.card_titulo}>Ollie</Text>
                     <Text>2.0Km</Text>
                     <Text>Away</Text>
-                    <Image style={styles.card_imagem} source={require('../../assets/passaro.png')} resizeMode="center" resizeMethod="auto" />
+                    <Image style={styles.card_imagem} source={require('../../assets/gato-ollie.png')} resizeMode="center" resizeMethod="auto" />
                 </View>
             </View>
         </ScrollView>
