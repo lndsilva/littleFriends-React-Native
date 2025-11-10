@@ -3,22 +3,22 @@ import { View, Text, StyleSheet, FlatList, StatusBar } from "react-native";
 import { List, Avatar, Image } from "react-native-paper";
 
 const DATA = [
-    { id: '1', title: 'Beija Flor', descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
-    { id: '2', title: 'Canário', descrition: 'Descrição do segundo item', icon: 'dots-vertical' },
-    { id: '3', title: 'Diamante', descrition: 'Descrição do terceiro item', icon: 'dots-vertical' },
-    { id: '4', title: 'Calopsita', descrition: 'Descrição do quarto item', icon: 'dots-vertical' },
-    { id: '5', title: 'Tico tico', descrition: 'Descrição do quinto item', icon: 'dots-vertical' },
-    { id: '6', title: 'Periquito', descrition: 'Descrição do sexto item', icon: 'dots-vertical' },
-    { id: '7', title: 'Cacatua', descrition: 'Descrição do sétimo item', icon: 'dots-vertical' },
-    { id: '8', title: 'Agapornis', descrition: 'Descrição do oitavo item', icon: 'dots-vertical' },
-    { id: '9', title: 'Pombo', descrition: 'Descrição do nono item', icon: 'dots-vertical' },
-    { id: '10', title: 'Trinca Ferro', descrition: 'Descrição do décimo item', icon: 'dots-vertical' },
+    { id: '1', title: 'Beija-Flor', image: require('../../assets/beijaFlor.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '2', title: 'Canário', image: require('../../assets/canary.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '3', title: 'Pardal', image: require('../../assets/pardal.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '4', title: 'Pica-Pau', image: require('../../assets/pica_pau.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '5', title: 'Bem-Te-Vi', image: require('../../assets/bem_te_vi.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '6', title: 'Andorinha', image: require('../../assets/andorinha.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '7', title: 'Sabiá Laranjeira', image: require('../../assets/sabia_laranjeira.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '8', title: 'Tico Tico', image: require('../../assets/tico_tico.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '9', title: 'Sanhaço', image: require('../../assets/sanhaco.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '10', title: 'Uirapurú', image: require('../../assets/uirapuru.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
 ]
 
 const renderItem = ({ item }) => (
     <View style={styles.container_list_item}>
         <List.Item
-            left={props => <Avatar.Image source={require('../../assets/passaro.png')} size={80} />}
+            left={props => <Avatar.Image source={item.image} size={130} />}
             title={item.title}
             description={item.description}
             right={props => <List.Icon {...props} icon={item.icon} />}

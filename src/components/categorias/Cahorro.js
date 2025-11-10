@@ -19,11 +19,12 @@ const DATA = [
 const renderItem = ({ item }) => (
     <View style={styles.container_list_item}>
         <List.Item
-            left={props => <Avatar.Image source={item.image} size={80} />}
+            left={props => <Avatar.Image source={item.image} size={130} />}
             title={item.title}
             description={item.description}
             right={props => <List.Icon {...props} icon={item.icon} />}
             onPress={() => console.log(`Pressionado`, item.title)}
+            titleStyle={styles.title}
         />
 
     </View>
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
-        marginBottom:10,
+        marginBottom: 10,
         borderRadius: 10,
         shadowColor: "#956402ff",
         shadowOffset: { width: 0, height: 2 },
@@ -71,6 +72,10 @@ const styles = StyleSheet.create({
     },
     listaContainer: {
         paddingVertical: 10,
-        paddingHorizontal: 10,
     },
+    title: {
+        fontSize: 24,
+        fontWeight: "bold",
+        color: "#8d0303ff",
+    }
 })
