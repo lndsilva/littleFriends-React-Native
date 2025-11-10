@@ -3,22 +3,22 @@ import { View, Text, StyleSheet, FlatList, StatusBar } from "react-native";
 import { List, Avatar, Image } from "react-native-paper";
 
 const DATA = [
-    { id: '1', title: 'Banzé', descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
-    { id: '2', title: 'Frank', descrition: 'Descrição do segundo item', icon: 'dots-vertical' },
-    { id: '3', title: 'Niko', descrition: 'Descrição do terceiro item', icon: 'dots-vertical' },
-    { id: '4', title: 'Pimpão', descrition: 'Descrição do quarto item', icon: 'dots-vertical' },
-    { id: '5', title: 'Tico', descrition: 'Descrição do quinto item', icon: 'dots-vertical' },
-    { id: '6', title: 'Pixel', descrition: 'Descrição do sexto item', icon: 'dots-vertical' },
-    { id: '7', title: 'Draco', descrition: 'Descrição do sétimo item', icon: 'dots-vertical' },
-    { id: '8', title: 'Fera', descrition: 'Descrição do oitavo item', icon: 'dots-vertical' },
-    { id: '9', title: 'Hans', descrition: 'Descrição do nono item', icon: 'dots-vertical' },
-    { id: '10', title: 'Kobe', descrition: 'Descrição do décimo item', icon: 'dots-vertical' },
+    { id: '1', title: 'Gruppy', descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '2', title: 'Neon', descrition: 'Descrição do segundo item', icon: 'dots-vertical' },
+    { id: '3', title: 'Platy', descrition: 'Descrição do terceiro item', icon: 'dots-vertical' },
+    { id: '4', title: 'Acará Disco', descrition: 'Descrição do quarto item', icon: 'dots-vertical' },
+    { id: '5', title: 'Acará Bandeira', descrition: 'Descrição do quinto item', icon: 'dots-vertical' },
+    { id: '6', title: 'Coridora', descrition: 'Descrição do sexto item', icon: 'dots-vertical' },
+    { id: '7', title: 'Kinguios', descrition: 'Descrição do sétimo item', icon: 'dots-vertical' },
+    { id: '8', title: 'Molinésia', descrition: 'Descrição do oitavo item', icon: 'dots-vertical' },
+    { id: '9', title: 'Danios Zebra', descrition: 'Descrição do nono item', icon: 'dots-vertical' },
+    { id: '10', title: 'Peixe Palhaço', descrition: 'Descrição do décimo item', icon: 'dots-vertical' },
 ]
 
 const renderItem = ({ item }) => (
     <View style={styles.container_list_item}>
         <List.Item
-            left={props => <Avatar.Image source={require('../../assets/pet_dog.jpg')} size={80} />}
+            left={props => <Avatar.Image source={require('../../assets/fish01.jpg')} size={80} />}
             title={item.title}
             description={item.description}
             right={props => <List.Icon {...props} icon={item.icon} />}
