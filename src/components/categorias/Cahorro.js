@@ -3,22 +3,23 @@ import { View, Text, StyleSheet, FlatList, StatusBar } from "react-native";
 import { List, Avatar, Image } from "react-native-paper";
 
 const DATA = [
-    { id: '1', title: 'Banzé', descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
-    { id: '2', title: 'Frank', descrition: 'Descrição do segundo item', icon: 'dots-vertical' },
-    { id: '3', title: 'Niko', descrition: 'Descrição do terceiro item', icon: 'dots-vertical' },
-    { id: '4', title: 'Pimpão', descrition: 'Descrição do quarto item', icon: 'dots-vertical' },
-    { id: '5', title: 'Tico', descrition: 'Descrição do quinto item', icon: 'dots-vertical' },
-    { id: '6', title: 'Pixel', descrition: 'Descrição do sexto item', icon: 'dots-vertical' },
-    { id: '7', title: 'Draco', descrition: 'Descrição do sétimo item', icon: 'dots-vertical' },
-    { id: '8', title: 'Fera', descrition: 'Descrição do oitavo item', icon: 'dots-vertical' },
-    { id: '9', title: 'Hans', descrition: 'Descrição do nono item', icon: 'dots-vertical' },
-    { id: '10', title: 'Kobe', descrition: 'Descrição do décimo item', icon: 'dots-vertical' },
+    { id: '1', title: 'Charlie', image: require('../../assets/dog_charlie.png'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '2', title: 'Brunno', image: require('../../assets/bulldog.png'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '3', title: 'Lambido', image: require('../../assets/lambido.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '4', title: 'Mosquito', image: require('../../assets/chihuahua.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '5', title: 'Nina', image: require('../../assets/beagle.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '6', title: 'Getúlio', image: require('../../assets/bernesse.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '7', title: 'Lobo', image: require('../../assets/husky.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '8', title: 'Leonard', image: require('../../assets/puppy.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '9', title: 'Meg', image: require('../../assets/meg.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '10', title: 'Chico', image: require('../../assets/basset.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+
 ]
 
 const renderItem = ({ item }) => (
     <View style={styles.container_list_item}>
         <List.Item
-            left={props => <Avatar.Image source={require('../../assets/pet_dog.jpg')} size={80} />}
+            left={props => <Avatar.Image source={item.image} size={80} />}
             title={item.title}
             description={item.description}
             right={props => <List.Icon {...props} icon={item.icon} />}
@@ -53,6 +54,7 @@ const styles = StyleSheet.create({
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
+        marginBottom:10,
         borderRadius: 10,
         shadowColor: "#956402ff",
         shadowOffset: { width: 0, height: 2 },
@@ -69,5 +71,6 @@ const styles = StyleSheet.create({
     },
     listaContainer: {
         paddingVertical: 10,
+        paddingHorizontal: 10,
     },
 })

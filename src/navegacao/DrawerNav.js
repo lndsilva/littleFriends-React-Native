@@ -8,9 +8,6 @@ import Explorer from "../components/Explorer";
 
 import CustomDrawer from "../view/CustomDrawer";
 
-
-
-
 const Drawer = createDrawerNavigator()
 
 export default props => {
