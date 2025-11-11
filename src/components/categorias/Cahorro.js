@@ -33,7 +33,7 @@ const renderItem = ({ item }) => (
 export default props => {
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Little Friends - Dogs</Text>
+            <Text style={styles.titulo}>Little Friends - Cachorro</Text>
             <View style={styles.conteudo}>
                 <FlatList
                     data={DATA}

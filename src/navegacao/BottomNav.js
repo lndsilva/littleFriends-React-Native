@@ -6,8 +6,6 @@ const Tab = createBottomTabNavigator();
 export default () => {
     return (
         <Tab.Navigator>
-            <Tab.Screen name="Categorias" component={Categorias}/>
-            <Tab.Screen name="Categorias" component={Categorias}/>
-        </Tab.Navigator>
+            <Tab.Screen name="Categorias" component={Categorias}/>        </Tab.Navigator>
     )
 }

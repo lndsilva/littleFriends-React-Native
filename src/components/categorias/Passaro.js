@@ -23,6 +23,7 @@ const renderItem = ({ item }) => (
             description={item.description}
             right={props => <List.Icon {...props} icon={item.icon} />}
             onPress={() => console.log(`Pressionado`, item.title)}
+            titleStyle={styles.title}
         />
 
     </View>
@@ -31,13 +32,13 @@ const renderItem = ({ item }) => (
 export default props => {
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Little Friends - Dogs</Text>
+            <Text style={styles.titulo}>Little Friends - Pássaro</Text>
             <View style={styles.conteudo}>
                 <FlatList
                     data={DATA}
                     renderItem={renderItem}
                     keyExtractor={item => item.id}
-                    contentContainerStyle={styles.listaContainer}
+                    contentContainerStyle={styles.listaContainer}                    
                 />
             </View>
         </View>
@@ -70,4 +71,9 @@ const styles = StyleSheet.create({
     listaContainer: {
         paddingVertical: 10,
     },
+     title: {
+        fontSize: 24,
+        fontWeight: "bold",
+        color: "#3E0703",
+    }
 })

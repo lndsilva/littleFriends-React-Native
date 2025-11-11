@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import { DrawerContentScrollView, DrawerItemList } from "@react-navigation/drawer";
 
-export default props => {
+export default (props) => {
     return (
         <View style={styles.conteudo}>
             <DrawerContentScrollView {...props}>

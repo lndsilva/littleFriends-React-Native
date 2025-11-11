@@ -2,9 +2,10 @@ import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import Home from "../components/Home";
-import Categorias from "../components/Categorias";
 import Details from "../components/Details";
 import Explorer from "../components/Explorer";
+import Cadastrar from "../components/Cadastrar";
+import Login from "../components/Login";
 
 import CustomDrawer from "../view/CustomDrawer";
 
@@ -23,10 +24,9 @@ export default props => {
                 headerTitle: "",
             }}
         >
-            <Drawer.Screen name="Home" component={Home} />
-            <Drawer.Screen name="Categorias" component={Categorias} />
-            <Drawer.Screen name="Details" component={Details} />
-            <Drawer.Screen name="Explorer" component={Explorer} />
+            <Drawer.Screen name="Home" component={Home} />            
+            <Drawer.Screen name="Cadastrar" component={Cadastrar} />
+            <Drawer.Screen name="Login" component={Login} />
         </Drawer.Navigator>
     )
 }

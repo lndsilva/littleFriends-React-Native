@@ -15,7 +15,7 @@ export default props => {
                 <Image source={require('../assets/img_home.png')} style={styles.img_home} />
                 <TouchableOpacity
                     style={styles.rodape_botao}
-                    onPress={() => navigation.navigate('Categorias')}>
+                    onPress={() => navigation.navigate('Login')}>
                     <Text style={styles.rodape_texto}>Get Started</Text>
                 </TouchableOpacity>
             </View>

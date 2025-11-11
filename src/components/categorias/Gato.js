@@ -5,7 +5,7 @@ import { Card, Icon } from "react-native-paper";
 export default props => {
     return (
         <ScrollView style={styles.container}>
-            <Text style={styles.titulo}>Categoria Pets</Text>
+            <Text style={styles.titulo}>Categoria Pets - Gato</Text>
             <View style={styles.container_linha}>
                 <View style={[styles.card_container, styles.card_color.cat]}>
                     <Icon style={styles.card_icon} source="heart-outline" size={30} color="#000" />
@@ -63,11 +63,11 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     titulo: {
-        marginTop: 10,
         alignSelf: "center",
+        marginTop: 10,
         fontFamily: "PassionOne-Bold",
-        fontSize: 50,
-        color: "#000",
+        fontSize: 30,
+        color: "#000000ff",
     },
     container_linha: {
         marginTop: 25,

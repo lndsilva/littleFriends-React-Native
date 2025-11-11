@@ -11,7 +11,7 @@ const Tab = createBottomTabNavigator();
 
 export default () => {
     return (
-        <Tab.Navigator initialRouteName="Cachorro"
+        <Tab.Navigator initialRouteName="Peixe"
             screenOptions={{
                 tabBarLabelStyle: { fontSize: 20 },
                 tabBarActiveTintColor: "#fff",
