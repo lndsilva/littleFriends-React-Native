@@ -4,14 +4,16 @@ import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
 // import DrawerNav from "./navegacao/DrawerNav";
-import StackNav from '../src/navegacao/StackNav'
+// import StackNav from '../src/navegacao/StackNav'
+import StackNavPages from '../src/components/pages/navegacao_pages/StackNavPages'
 
 export default props => {
     return (
         <SafeAreaView style={styles.container}>
             <NavigationContainer>
-                <StackNav />
+                {/* <StackNav /> */}
                 {/* <DrawerNav /> */}
+                <StackNavPages />
             </NavigationContainer>
         </SafeAreaView>
     )
