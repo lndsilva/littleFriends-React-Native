@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList, StatusBar } from "react-native";
+import { View, Text, StyleSheet, FlatList, StatusBar, TouchableOpacity } from "react-native";
 import { List, Avatar, Image } from "react-native-paper";
 
 const DATA = [
@@ -26,7 +26,6 @@ const renderItem = ({ item }) => (
             onPress={() => console.log(`Pressionado`, item.title)}
             titleStyle={styles.title}
         />
-
     </View>
 )
 

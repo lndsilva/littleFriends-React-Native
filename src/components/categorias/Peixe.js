@@ -4,9 +4,9 @@ import { List, Avatar, Image } from "react-native-paper";
 
 const DATA = [
     { id: '1', title: 'Betta', image: require('../../assets/fish01.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
-    { id: '2', title: 'Neón', image: require('../../assets/fish02.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '2', title: 'Dory', image: require('../../assets/dolly.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
     { id: '3', title: 'Guppy', image: require('../../assets/fish03.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
-    { id: '4', title: 'Pica-Molinéssia', image: require('../../assets/fish04.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
+    { id: '4', title: 'Nemo', image: require('../../assets/fish04.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
     { id: '5', title: 'Platy', image: require('../../assets/fish05.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
     { id: '6', title: 'Pleco', image: require('../../assets/fish06.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
     { id: '7', title: 'Coridora', image: require('../../assets/fish07.jpg'), descrition: 'Descrição do primeiro item', icon: 'dots-vertical' },
@@ -18,7 +18,7 @@ const DATA = [
 const renderItem = ({ item }) => (
     <View style={styles.container_list_item}>
         <List.Item
-            left={props => <Avatar.Image source={item.image} size={80} />}
+            left={props => <Avatar.Image source={item.image} size={130} />}
             title={item.title}
             description={item.description}
             right={props => <List.Icon {...props} icon={item.icon} />}
